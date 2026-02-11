@@ -83,7 +83,12 @@ public class Test {
 		printNames(string);
 		System.out.println(replaceCharWithSpace(string));
 		System.out.println(reversedFirstName(string));
-		
+		System.out.println(string.contains("#"));
+		String name="Guhan";
+		StringBuilder result=new StringBuilder(name);
+		result.append(' ');
+		result.append("Muthuramalingam");
+		System.out.println(result.toString());
 		
 	}
 
