@@ -24,7 +24,7 @@ public class Anagram {
 	}
 	public static void main(String[] args) {
 		
-		System.out.println(isAnagram("sient", "listen"));
+		System.out.println(isAnagram("sielnt", "listen"));
 		
 		
 	}
