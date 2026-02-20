@@ -6,7 +6,8 @@ public class CaseConversion {
 		String str="JaVa123";
 		StringBuilder result=new StringBuilder();
 		char c='J';
-		System.out.println((char)((int)c+32));
+		System.out.println((char)(c+32));
+		System.out.println((int)'a');
 		for(char ch:str.toCharArray()) {
 			if((ch>='a' && ch<='z')){
 				result.append((char)((int)ch-32));
