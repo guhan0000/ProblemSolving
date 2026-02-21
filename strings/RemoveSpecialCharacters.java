@@ -19,7 +19,7 @@ public class RemoveSpecialCharacters {
 		
 	}
 	public static void main(String[] args) {
-		String str="Ja@va# 123!!";
+		String str="Ja@va# 1203!!";
 		System.out.println(removeSpecialChars(str));
 	}
 	
