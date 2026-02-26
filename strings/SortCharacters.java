@@ -11,7 +11,7 @@ public class SortCharacters {
 	}
 	
 	public static void main(String args[]) {
-		String str="zcdea";
+		String str="geeksforgeeks";
 		StringBuilder result=new StringBuilder();
 		char strArr[]=str.toCharArray();
 		Stream.of(strArr).sorted().forEach(n->System.out.println(n));

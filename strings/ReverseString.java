@@ -18,6 +18,22 @@ public class ReverseString {
 		}
 		System.out.println(res);
 		
+		
+//		reverse w/o using new srting
+		
+		String firstName="Guhan";
+		char[] firstNameArr=firstName.toCharArray();
+		char temp;
+		int n=firstName.length();
+		int j=n-1;
+		for(int i=0;i<n/2;i++) {
+			temp=firstNameArr[i];
+			firstNameArr[i]=firstNameArr[j];
+			firstNameArr[j]=temp;	
+			j--;
+		}
+		System.out.println(new String(firstNameArr));
+		
 	}
 
 }
