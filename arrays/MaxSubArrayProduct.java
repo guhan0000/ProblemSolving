@@ -1,8 +1,25 @@
 package arrays;
 
 public class MaxSubArrayProduct {
+	
+	
+	public static int bruteForce(int arr[]) {
+		int maxProd=arr[0];
+	
+		for(int i=0;i<arr.length;i++) {
+			int prod=1;
+			for(int j=i;j<arr.length;j++) {
+				prod*=arr[j];
+				maxProd=Math.max(prod,maxProd);
+			}
+		}
+		
+		
+		return maxProd;
+	}
+	
 	public static void main(String[] args) {
-		int arr[]= {2, 3, -2, 4};
+		int arr[]= {2, 0, -2, 4};
 		int maxSofar=arr[0];
 		int minSoFar=arr[0];
 		int result=arr[0];
@@ -18,6 +35,8 @@ public class MaxSubArrayProduct {
 			result=Math.max(result, maxSofar);	
 		}
 		System.out.println(result);
+		System.out.println("bruteforce");
+		System.out.println(bruteForce(arr));
 	}
 
 }

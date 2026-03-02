@@ -9,6 +9,40 @@ import java.util.List;
 import java.util.Map;
 
 public class SortArrayByFreq {
+	public static int[] sortByFrequency(int arr[]){
+        List<Integer>list=new ArrayList<>();
+        for(int num:arr){
+            list.add(num);
+        }
+        Map<Integer,Integer>mapCount=new HashMap<Integer,Integer>();
+        Map<Integer,Integer>mapIndex=new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            if(mapCount.containsKey(arr[i])){
+                mapCount.put(arr[i],mapCount.get(arr[i])+1);
+            }
+            else{
+                mapCount.put(arr[i],1);
+                mapIndex.put(arr[i],i);
+            }
+        }
+        Collections.sort(list,(n1,n2)->{
+            int freq1=mapCount.get(n1);
+            int freq2=mapCount.get(n2);
+            if(freq1!=freq2){
+                return freq2-freq1;
+            }
+            else{
+                return mapIndex.get(n2)-mapIndex.get(n1);
+            }
+        });
+        System.out.println(mapCount);
+        System.out.println(mapIndex);
+        int res[]=new int[arr.length];
+       for(int i=0;i<list.size();i++){
+           res[i]=list.get(i);
+       }
+       return res;
+    } 
 	public static void main(String[] args) {
 		int arr[]= {10, 20, 10, 10, 20, 30, 30, 30, 30, 0};
 		List<Integer>list=new ArrayList();
