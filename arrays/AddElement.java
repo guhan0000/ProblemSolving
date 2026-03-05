@@ -30,7 +30,7 @@ public class AddElement {
 	public static void main(String args[]) {
 		
 		int arr[]= {1,3,5,7};
-		System.out.println(Arrays.toString(addElement(arr, 100,4)));
+		System.out.println(Arrays.toString(addElement(arr, 100,1)));
 	}
 
 }

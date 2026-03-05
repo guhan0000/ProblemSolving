@@ -33,7 +33,7 @@ public class ArrayDisjointOrNot {
 	}
 	public static void main(String[] args) {
 		int arr1[]= {1,2,3};
-		int arr2[]= {4,1,9};
+		int arr2[]= {4,0,9};
 		System.out.println(isDisjoint(arr1, arr2));
 		
 	}
