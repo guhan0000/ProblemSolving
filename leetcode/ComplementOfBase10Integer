@@ -1,0 +1,36 @@
+class Solution {
+    public int bitwiseComplement(int n) {
+        if (n==0){
+            return 1;
+        }
+        String binaryN="";
+        StringBuilder result=new StringBuilder();
+        while(n>=1){
+            int rem=n%2;
+            binaryN=rem+binaryN;
+            n/=2;
+        }
+        for(char ch:binaryN.toCharArray()){
+            if(ch=='1'){
+                result.append('0');
+            }
+            else{
+                result.append('1');
+            }
+        }
+        String toggledBits=result.toString();
+        int base=1;
+        int sum=0;
+        for(int i=toggledBits.length()-1;i>=0;i--){
+
+            
+           int digit=Integer.valueOf(toggledBits.charAt(i)-'0');
+            sum=sum+(base*digit);
+            base*=2;
+
+        }
+        
+        
+        return sum;
+    }
+}
