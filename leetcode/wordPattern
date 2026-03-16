@@ -1,0 +1,25 @@
+class Solution {
+    public boolean wordPattern(String pattern, String s) {
+        String result="";
+        String[] split=s.split("\\s+");
+        if(pattern.length()!=split.length){
+            return false;
+        }
+        // System.out.println(Arrays.toString(split));
+        Map<Character,String>map=new LinkedHashMap<>();
+        for(int i=0;i<split.length;i++){
+            if(!map.containsValue(split[i]))
+                  map.put(pattern.charAt(i),split[i]);
+        }
+        // System.out.println(map);
+        for(char ch:pattern.toCharArray()){
+            result+=map.get(ch);
+            result+=" ";
+        }
+        
+        if(s.equals(result.trim())){
+            return true;
+        }
+        return false;
+    }
+}
